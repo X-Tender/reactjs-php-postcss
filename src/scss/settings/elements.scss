@@ -1,0 +1,81 @@
+/*----------  GLOBALS  ----------*/
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	cursor: default;
+	@include font('narrow-regular', 16px, none, 0);
+	color: $typo-color;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+}
+
+address {
+	font-style: normal;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+button {
+	&[disabled] {
+		pointer-events: none;
+	}
+
+	&:not([disabled]) {
+		cursor: pointer;
+	}
+
+	-webkit-tap-highlight-color: transparent;
+
+	> * {
+		pointer-events: none;
+	}
+}
+
+input {
+	display: block;
+}
+
+img {
+	display: block;
+}
+
+/*----------  GLOBAL CLASSES  ----------*/
+
+.hidden {
+	display: none !important;
+}
+
+.clearfix {
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+/*----------  TYPOSTANDARDS  ----------*/
+
+:--headlines {
+	margin: 0;
+}

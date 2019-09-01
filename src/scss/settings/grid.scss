@@ -1,0 +1,53 @@
+@mesh-grid {
+	column-align: top;
+	column-count: 12;
+	compile: true;
+	container-width: 100%;
+	display-type: inline-block;
+	gutter-on-outside: true;
+	responsive-gutter: false;
+	gutter: $gutter;
+	name: xt;
+	query-condition: min-width;
+	container-base-width-unit: vw;
+	naming-column: col;
+	naming-offset: off;
+	debug-property: outline;
+	debug-value: 4px dashed #e900ff;
+	debug: true;
+	exclude-columns: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+	exclude-offsets: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+	exclude-pulls: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+	exclude-pushes: 0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12;
+	viewport: 375px;
+
+	@mesh-viewport-sm {
+		container-width: 100%;
+		viewport: $breakpoint-sm;
+		gutter: $gutter-sm;
+	}
+
+	@mesh-viewport-md {
+		container-width: 720px;
+		viewport: $breakpoint-md;
+		gutter: $gutter-md;
+	}
+
+	@mesh-viewport-lg {
+		container-width: 960px;
+		viewport: $breakpoint-lg;
+		gutter: $gutter-lg;
+	}
+
+	@mesh-viewport-xl {
+		container-width: 1140px;
+		viewport: $breakpoint-xl;
+		gutter: $gutter-xl;
+	}
+
+	@mesh-viewport-xxl {
+		container-width: 1280px;
+		viewport: $breakpoint-xxl;
+		gutter: $gutter-xxl;
+	}
+}
